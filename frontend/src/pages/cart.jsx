@@ -1,7 +1,7 @@
-import react from 'react'
+import React from 'react'
 
-const cart = () => {
-    return(
+function cart() {
+    return (
         <div>
 
         </div>
