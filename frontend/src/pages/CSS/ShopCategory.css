@@ -1,0 +1,86 @@
+/* Banner styling */
+.shopcategory-banner {
+    display: block;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 1200px; /* Limits width on larger screens */
+    border-radius: 10px; /* Slight rounding for a smoother look */
+}
+
+/* Index and Sort container */
+.shopcategory-indexSort {
+    display: flex;
+    margin: 0 10%;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+}
+
+/* Sort button styling */
+.shopcategory-sort {
+    padding: 10px 20px;
+    border-radius: 40px;
+    border: 1px solid #888;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.shopcategory-sort:hover {
+    background-color: #f0f0f0;
+}
+
+/* Styling for product count text */
+.shopcategory-indexSort p span {
+    font-weight: 600;
+    color: #333;
+}
+
+/* Product grid layout */
+.shopcategory-products {
+    margin: 20px 10%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Responsive columns */
+    gap: 40px; /* Consistent gap for both row and column */
+}
+
+/* Load more button styling */
+.shopcategory-loadmore {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 60px auto;
+    width: 200px;
+    height: 60px;
+    border-radius: 30px;
+    background: #f0f0f0;
+    color: #555;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.shopcategory-loadmore:hover {
+    background-color: #e0e0e0;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .shopcategory-indexSort {
+        margin: 0 5%;
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .shopcategory-products {
+        margin: 20px 5%;
+        gap: 20px; /* Reduced gap for mobile */
+    }
+
+    .shopcategory-loadmore {
+        width: 180px;
+        height: 55px;
+        font-size: 15px;
+    }
+}

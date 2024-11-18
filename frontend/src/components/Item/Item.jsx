@@ -1,11 +1,19 @@
 import React from 'react';
+import { Link } from 'react-router-dom';  // Import Link from react-router-dom
 import './Item.css';
 
 const Item = (props) => {
   console.log(props);  // Log the props to check if they are passed correctly
   return (
     <div className='item'>
-      <img src={props.image} alt={props.name} />
+      {/* Replace <link> with <Link> */}
+      <Link to={`/product/${props.id}`}>
+        <img 
+          onClick={() => window.scrollTo(0, 0)} 
+          src={props.image} 
+          alt={props.name} 
+        />
+      </Link>
       <p>{props.name}</p>
       <div className='item-prices'>
         <div className='item-price-new'>

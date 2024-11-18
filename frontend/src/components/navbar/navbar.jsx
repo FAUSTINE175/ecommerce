@@ -4,9 +4,12 @@ import './navbar.css';
 
 import logo from '../assets/logo.png';  
 import cart from '../assets/cart.png';  
+import { useContext } from 'react';
+import { ShopContext } from '../../context/ShopContext';
 
 const Navbar = () => {
     const [menu, setmenu] = useState("shop");
+    const {getTotalCartItems} = useContext(ShopContext);
 
     return (
         <div className='navbar'>
@@ -31,7 +34,7 @@ const Navbar = () => {
             <div className="nav-login-cart">
                 <Link to='/login'><button>Login</button></Link>
                 <Link to='/cart'><img src={cart} alt="Cart" className="cart-icon" /></Link>
-                <div className="nav-cart-count">0</div>
+                <div className="nav-cart-count">{getTotalCartItems()}</div>
             </div>
         </div>
     );

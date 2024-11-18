@@ -4,6 +4,7 @@ import a15_img from "./a15.png";
 import a35_img from "./a35.png";
 import iphone15_img from "./iphone15.png";
 
+
 let all_product = [
     {
         id: 1,
@@ -46,3 +47,5 @@ let all_product = [
         old_price: 95000,
     },
 ];
+
+export default all_product;

@@ -1,0 +1,105 @@
+/* Main newsletter container */
+.newsletter {
+    width: 70%;
+    max-width: 1200px; /* Max width to prevent over-stretching on large screens */
+    height: auto; /* Allows the height to adjust based on content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 100px auto;
+    padding: 20px;
+    background: linear-gradient(180deg, #fde1ff 0%, #e1ffea22 60%);
+    gap: 20px;
+    border-radius: 10px; /* Soft rounding for a modern touch */
+}
+
+/* Heading styling */
+.newsletter h1 {
+    color: #333;
+    font-size: 48px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Paragraph styling */
+.newsletter p {
+    color: #555;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 10px; /* Additional margin for spacing */
+}
+
+/* Input container styling */
+.newsletter div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    width: 90%;
+    max-width: 730px;
+    height: 60px; /* Slightly reduced height */
+    border-radius: 80px;
+    border: 1px solid #e3e3e3;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05); /* Soft shadow for depth */
+}
+
+/* Input styling */
+.newsletter input {
+    flex: 1; /* Adjusts input width to be flexible */
+    padding: 0 15px;
+    border: none;
+    outline: none;
+    color: #616161;
+    font-family: Poppins, sans-serif;
+    font-size: 16px;
+    border-radius: 80px 0 0 80px;
+}
+
+/* Button styling */
+.newsletter div button {
+    width: 180px;
+    height: 60px;
+    border-radius: 0 80px 80px 0;
+    background: black;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.newsletter div button:hover {
+    background-color: #333;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .newsletter {
+        width: 90%;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .newsletter h1 {
+        font-size: 36px;
+    }
+
+    .newsletter p {
+        font-size: 16px;
+    }
+
+    .newsletter div {
+        width: 100%;
+        height: 55px;
+    }
+
+    .newsletter input {
+        font-size: 14px;
+    }
+
+    .newsletter div button {
+        width: 150px;
+        height: 55px;
+        font-size: 14px;
+    }
+}
