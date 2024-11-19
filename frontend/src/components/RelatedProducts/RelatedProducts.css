@@ -1,24 +1,81 @@
-.relatedproducts{
+.relatedproducts {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    height: 90vh;
+    padding: 20px;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    padding: 10px 0; /* Ensure padding for visibility */
+    scroll-behavior: smooth; /* Smooth scrolling */
+    
 }
-.relatedproducts h1{
+
+.relatedproducts h1 {
     color: #171717;
     font-size: 50px;
     font-weight: 600;
+    margin: 0;
 }
-.relatedproducts hr{
+
+.relatedproducts hr {
     width: 200px;
     height: 6px;
     border-radius: 10px;
     background: #252525;
+    border: none;
 }
-.relatedproducts-item{
-    margin-top: 50px;
-    display: flex;
-    gap: 30px;
 
+.relatedproducts-item {
+    display: flex;
+    gap: 20px;
+
+}
+
+.relatedproducts-item::-webkit-scrollbar {
+    height: 8px; /* Visible horizontal scrollbar */
+}
+
+.relatedproducts-item::-webkit-scrollbar-thumb {
+    background-color: #252525; /* Thumb color */
+    border-radius: 10px; /* Rounded scrollbar */
+}
+
+.relatedproducts-item::-webkit-scrollbar-track {
+    background-color: #f5f5f5; /* Track color */
+}
+
+.item {
+    flex: 0 0 auto; /* Prevent items from shrinking */
+    width: 200px; /* Set a fixed width for each item */
+    text-align: center;
+    padding: 15px;
+    background: #fbfbfb;
+    border: 1px solid #ebebeb;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.item h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #252525;
+    margin: 5px 0;
+}
+
+.item p {
+    font-size: 16px;
+    color: #171717;
+    margin: 0;
+}
+
+.item:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }

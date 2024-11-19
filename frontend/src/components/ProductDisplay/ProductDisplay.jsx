@@ -38,8 +38,8 @@ const ProductDisplay = (props) => {
                     <p>(122)</p>
                 </div>
                 <div className="productdisplay-right-prices">
-                    <div className="productdisplay-right-prices-old">${product.old_price}</div>
-                    <div className="productdisplay-right-prices-new">${product.new_price}</div>
+                    <div className="productdisplay-right-prices-old">ksh{product.old_price}</div>
+                    <div className="productdisplay-right-prices-new">ksh{product.new_price}</div>
                 </div>
                 <div className="productdisplay-right-description">
                     A powerful and feature-packed smartphone that offers lightning-fast 5G connectivity and impressive performance. With its stunning display, versatile camera system, long-lasting battery, and seamless integration with the Galaxy ecosystem, it’s a device that elevates your mobile experience to the next level.

@@ -65,12 +65,13 @@
     flex: 1;
     font-size: 16px;
     font-weight: 500;
+    display:inline-block;
 }
 .cartitems-referralcode p{
     color: #555;
 }
 .cartitems-referralbox{
-    width: 504px;
+    width: 250px;
     margin-top: 15px;
     padding-left: 20px;
     height: 58px;
@@ -81,12 +82,14 @@
     outline: none;
     background: transparent;
     font-size: 16px;
-    width: 330px;
+    width: 150px;
     height: 50px;
 }
 .cartitems-referralbox button{
-    width: 170px;
+    width: 100px;
     height: 58px;
+    position: relative;
+    margin-top: 20px;
     font-size: 16px;
     background: black;
     color: white;
