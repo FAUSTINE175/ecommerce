@@ -1,7 +1,7 @@
 .loginsignup {
     width: 100%;
     min-height: 80vh;
-    background: #fce3fe;
+    background: linear-gradient(135deg, #fce3fe 0%, #f9c2ff 100%); /* Gradient background */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,16 +12,22 @@
 .loginsignup-container {
     width: 100%;
     max-width: 580px;
+    align-items: center;
     background: white;
     padding: 40px 60px;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    border-radius: 15px; /* Slightly larger border radius for a softer look */
     margin: 0 auto;
+    transition: transform 0.3s; /* Add transition for hover effect */
+}
+
+.loginsignup-container:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
 }
 
 .loginsignup-container h1 {
     margin: 20px 0px;
-    font-size: 26px;
+    font-size: 28px; /* Increased font size */
     color: #333333;
     text-align: center;
 }
@@ -40,6 +46,12 @@
     outline: none;
     color: #5c5c5c;
     font-size: 18px;
+    border-radius: 5px; /* Rounded corners for inputs */
+    transition: border-color 0.3s; /* Transition for input focus effect */
+}
+
+.loginsignup-fields input:focus {
+    border-color: #ff4141; /* Change border color on focus */
 }
 
 .loginsignup-container button {
@@ -52,6 +64,12 @@
     font-size: 24px;
     font-weight: 500;
     cursor: pointer;
+    border-radius: 5px; /* Rounded corners for button */
+    transition: background-color 0.3s; /* Transition for button hover effect */
+}
+
+.loginsignup-container button:hover {
+    background: #ff1e1e; /* Darken button color on hover */
 }
 
 .loginsignup-login {
@@ -66,6 +84,11 @@
     color: #ff4141;
     font-weight: 600;
     cursor: pointer;
+    transition: color 0.3s; /* Transition for hover effect */
+}
+
+.loginsignup-login span:hover {
+    color: #ff1e1e; /* Darken text color on hover */
 }
 
 .loginsignup-agree {
@@ -76,4 +99,10 @@
     color: #5c5c5c;
     font-size: 18px;
     font-weight: 500;
+}
+
+/* Additional styles for checkboxes */
+.loginsignup-agree input[type="checkbox"] {
+    transform: scale(1.2); /* Enlarge checkbox */
+    margin-right: 10px; /* Add spacing */
 }

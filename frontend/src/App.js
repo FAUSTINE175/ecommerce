@@ -14,6 +14,9 @@ import samsung_banner from './components/assets/samsung_banner.png';
 import pixel_banner from './components/assets/pixel-banner.png';
 import NewsLetter from './components/NewsLetter/NewsLetter';
 import ShopCategory from './pages/ShopCategory';
+import Checkout from './components/CheckoutItems/CheckoutItems';
+
+
 
 
 function App() {
@@ -43,6 +46,8 @@ function App() {
           </Route>
           <Route path="/cart" element={<Cart />} />
           <Route path="/login" element={<LoginSignup />} />
+          <Route path="/checkout" element={<Checkout />} />
+          
         </Routes>
 
         <Footer />

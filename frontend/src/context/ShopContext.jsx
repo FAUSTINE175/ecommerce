@@ -13,21 +13,18 @@ const getDefaultCart = () => {
 
 const ShopContextProvider = (props) => {
     const [cartItems, setCartItems] = useState(getDefaultCart());
+    const [checkoutDetails, setCheckoutDetails] = useState(null);
 
     const addToCart = (itemId) => {
-        console.log('Adding to cart, itemId:', itemId); // Log itemId when adding to cart
         setCartItems((prev) => {
             const updatedCart = { ...prev, [itemId]: prev[itemId] + 1 };
-            console.log('Updated cartItems:', updatedCart); // Log the updated cartItems state
             return updatedCart;
         });
     };
 
     const removeFromCart = (itemId) => {
-        console.log('Removing from cart, itemId:', itemId); // Log itemId when removing from cart
         setCartItems((prev) => {
             const updatedCart = { ...prev, [itemId]: Math.max(prev[itemId] - 1, 0) };
-            console.log('Updated cartItems after removal:', updatedCart); // Log updated cartItems after removal
             return updatedCart;
         });
     };
@@ -55,16 +52,35 @@ const ShopContextProvider = (props) => {
         return totalItem;
     };
 
+    const checkout = (userDetails) => {
+        const filteredProducts = all_product.filter((product) => cartItems[product.id] > 0);
+        const orderDetails = {
+            userDetails,
+            items: filteredProducts.map((product) => ({
+                id: product.id,
+                name: product.name,
+                price: product.new_price,
+                quantity: cartItems[product.id],
+                total: product.new_price * cartItems[product.id],
+            })),
+            totalAmount: getTotalCartAmount(),
+        };
+
+        setCheckoutDetails(orderDetails);
+        setCartItems(getDefaultCart());
+        return orderDetails;
+    };
+
     const contextvalue = {
         getTotalCartItems,
         getTotalCartAmount,
         all_product,
         cartItems,
         addToCart,
-        removeFromCart
+        removeFromCart,
+        checkout,
+        checkoutDetails,
     };
-
-    console.log('Current cartItems in ShopContext:', cartItems); // Log cartItems when the provider renders
 
     return (
         <ShopContext.Provider value={contextvalue}>

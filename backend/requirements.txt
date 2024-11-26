@@ -1,0 +1,7 @@
+# requirements.txt
+flask==2.3.2
+flask-sqlalchemy==3.0.3
+flask-cors==4.0.0
+flask-jwt-extended==4.5.2
+python-dotenv==1.0.0
+mysqlclient==2.2.0

@@ -1,58 +1,108 @@
-.cartitems{
-    margin: 100px 170px;
+.items {
+    margin: 50px auto;
+    padding: 20px;
+    max-width: 1200px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-.cartitems hr{
-    height: 3px;
+
+.cartitems hr {
+    height: 2px;
     background: #e2e2e2;
     border: 0;
+    margin: 20px 0;
 }
-.cartitems-format-main{
+
+.format-main {
     display: grid;
-    grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 0.8fr 2fr 1fr 1fr 1fr 0.5fr;
     align-items: center;
-    gap: 75px;
-    padding: 20px 0px;
+    gap: 20px;
+    padding: 10px 0;
     color: #454545;
     font-size: 18px;
     font-weight: 600;
+    border-bottom: 2px solid #eaeaea;
 }
-.cartitems-format{
-    font-size: 17px;
-    font-weight: 500;
+
+.cartitems-format {
+    display: grid;
+    grid-template-columns: 0.8fr 2fr 1fr 1fr 1fr 0.5fr;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 0;
+    font-size: 16px;
+    color: #333;
 }
-.carticon-product-icon{
-    height: 62px;
+
+.carticon-product-icon {
+    width: 100%;
+    max-width: 80px;
+    border-radius: 4px;
+    object-fit: cover;
 }
-.cartitems-remove-icon{
-    width: 15px;
-    margin: 0px 40px;
+
+.cartitems-remove-icon {
+    width: 20px;
+    height: 20px;
     cursor: pointer;
+    transition: transform 0.2s ease;
 }
-.cartitems-quantity{
+
+.cartitems-remove-icon:hover {
+    transform: scale(1.2);
+}
+
+.cartitems-quantity {
     width: 64px;
-    height: 50px;
-    border: 2px solid #ebebeb;
+    height: 40px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
     background: #fff;
 }
-.cartitems-down{
+
+.cartitems-down {
     display: flex;
-    margin: 100px 0px;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 40px;
+    align-items: flex-start;
+    justify-content: space-between;
 }
-.cartitems-total{
+
+.cartitems-total {
     flex: 1;
     display: flex;
     flex-direction: column;
-    margin-right: 200px;
-    gap: 40px;
+    gap: 20px;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    max-width: 350px;
 }
-.cartitems-total-item{
+
+.cartitems-total-item {
     display: flex;
     justify-content: space-between;
-    padding: 15px 0px;
+    font-size: 16px;
+    color: #555;
+    padding: 10px 0;
 }
-.cartitems-total button{
-    width: 262px;
-    height: 58px;
+
+.cartitems-total h1 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.cartitems-total button {
+    width: 100%;
+    height: 48px;
     outline: none;
     border: none;
     background: #ff5a5a;
@@ -60,38 +110,59 @@
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 4px;
 }
-.cartitems-referralcode{
+
+.cartitems-total button:hover {
+    background: #e04a4a;
+}
+
+.cartitems-total button:disabled {
+    background: #d8d8d8;
+    cursor: not-allowed;
+}
+
+.cartitems-referralcode {
     flex: 1;
     font-size: 16px;
     font-weight: 500;
-    display:inline-block;
-}
-.cartitems-referralcode p{
     color: #555;
 }
-.cartitems-referralbox{
-    width: 250px;
-    margin-top: 15px;
-    padding-left: 20px;
-    height: 58px;
-    background: #eaeaea;
+
+.cartitems-referralcode p {
+    margin-bottom: 10px;
 }
-.cartitems-referralbox input{
+
+.cartitems-referralbox {
+    display: flex;
+    align-items: center;
+    border: 1px solid #eaeaea;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.cartitems-referralbox input {
+    flex: 1;
+    padding: 10px;
     border: none;
     outline: none;
-    background: transparent;
-    font-size: 16px;
-    width: 150px;
-    height: 50px;
+    font-size: 14px;
+    background: #f9f9f9;
 }
-.cartitems-referralbox button{
+
+.cartitems-referralbox button {
     width: 100px;
-    height: 58px;
-    position: relative;
-    margin-top: 20px;
-    font-size: 16px;
+    height: 40px;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
     background: black;
     color: white;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cartitems-referralbox button:hover {
+    background: #333;
 }
